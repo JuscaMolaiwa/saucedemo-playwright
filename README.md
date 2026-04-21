@@ -168,7 +168,7 @@ mvn clean test -Dbrowser=firefox -Dheadless=false -Dtest=CartTest
 mvn allure:report
 
 # Open the report in your browser
-mvn allure:serve
+allure serve
 ```
 
 The report is also saved statically at:
