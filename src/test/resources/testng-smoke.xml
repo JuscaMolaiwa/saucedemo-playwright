@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!--
+    SauceDemo Smoke Test Suite
+    Run via: mvn clean test
+    Report: mvn allure:report  (generates target/site/allure-maven-plugin/index.html)
+-->
+<suite name="SauceDemo Smoke Suite" verbose="1" parallel="false">
+
+    <!-- Global parameters accessible via @Parameters in any test class -->
+    <parameter name="browser"  value="chromium"/>   <!-- chromium | firefox | webkit -->
+    <parameter name="headless" value="true"/>
+    <parameter name="baseUrl"  value="https://www.saucedemo.com/v1/"/>
+
+    <test name="Authentication Smoke Tests">
+        <classes>
+            <class name="com.saucedemo.tests.LoginTest"/>
+        </classes>
+    </test>
+
+    <test name="Inventory Smoke Tests">
+        <classes>
+            <class name="com.saucedemo.tests.InventoryTest"/>
+        </classes>
+    </test>
+
+    <test name="Cart Smoke Tests">
+        <classes>
+            <class name="com.saucedemo.tests.CartTest"/>
+        </classes>
+    </test>
+
+    <test name="Checkout Smoke Tests">
+        <classes>
+            <class name="com.saucedemo.tests.CheckoutTest"/>
+        </classes>
+    </test>
+
+</suite>

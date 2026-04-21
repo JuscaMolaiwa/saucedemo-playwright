@@ -1,0 +1,22 @@
+# Maven build output
+target/
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+
+# Playwright browser binaries
+.playwright/
+
+# Logs
+*.log
+
+# OS artefacts
+.DS_Store
+Thumbs.db
+
+# Allure
+.allure/
+allure-results/
+allure-report/
