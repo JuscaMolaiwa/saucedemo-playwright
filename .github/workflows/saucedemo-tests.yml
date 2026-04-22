@@ -36,9 +36,7 @@ jobs:
       # Install ALL browsers + dependencies
       - name: Install Playwright Browsers
         if: steps.cache-playwright.outputs.cache-hit != 'true'
-        run: mvn exec:java -e \
-          -D exec.mainClass=com.microsoft.playwright.CLI \
-          -D exec.args="install --with-deps"
+        run: mvn exec:java -e -Dexec.mainClass=com.microsoft.playwright.CLI -Dexec.args="install --with-deps"
 
       - name: Resolve dependencies
         run: mvn dependency:resolve
