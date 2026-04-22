@@ -22,7 +22,7 @@ public final class TestConfig {
     public static final String BROWSER =
             System.getProperty("browser", "chromium");          // chromium | firefox | webkit
     public static final boolean HEADLESS =
-            Boolean.parseBoolean(System.getProperty("headless", "false")); // run in headless mode
+            Boolean.parseBoolean(System.getProperty("headless", "true")); // run in headless mode
     public static final int TIMEOUT_MS =
             Integer.parseInt(System.getProperty("timeoutMs", "10000"));  // default 10 s
 
